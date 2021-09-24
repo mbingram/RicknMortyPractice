@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import Header from './Header';
+import CharacterContainer from './CharacterContainer';
 
 function App() {
+  const [characters, setCharacters] = useState([]);
+  const random = Math.random() * (35 - 1) + 1
+  const randomPageURL = `https://rickandmortyapi.com/api/character?page=${random}`
+  const apiURL = `https://rickandmortyapi.com/api/character`
+
+
+  useEffect(() => {
+    fetch(apiURL)
+    .then(response => response.json())
+    .then(data => setCharacters(data.results))
+  }, [apiURL])
+
+  const fetchRandom = () => {
+    fetch(randomPageURL)
+    .then(response => response.json())
+    .then(data => setCharacters(data.results))
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header fetchRandom={fetchRandom} />
+      <CharacterContainer characters={characters} key={characters.length} />
     </div>
   );
 }
