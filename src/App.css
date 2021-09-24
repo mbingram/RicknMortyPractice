@@ -2,11 +2,42 @@
   font-family: HelveticaNeue;
 }
 
-.header {
+body {
+  background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/badad0a5-3e93-4739-86d6-1e1bc9c91743/ddxppe7-c321a1d8-5d07-49d9-84bf-fd258443f4d5.png/v1/fill/w_1280,h_721,q_80,strp/rick_and_morty_background_by_mmormo_ddxppe7-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIxIiwicGF0aCI6IlwvZlwvYmFkYWQwYTUtM2U5My00NzM5LTg2ZDYtMWUxYmM5YzkxNzQzXC9kZHhwcGU3LWMzMjFhMWQ4LTVkMDctNDlkOS04NGJmLWZkMjU4NDQzZjRkNS5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.0w1TrHbO6i_zo1bgL38TZAs_VhoyYDybNWNeFiDiIjU');  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100%;
+}
+
+/* .header {
   height: 60px;
   background-color: #FFFFFF;
   border-bottom: 1px gray solid;
   margin: 0;
+} */
+
+.button_slide {
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(216, 2, 134);
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #D80286;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.button_slide:hover {
+  box-shadow: inset 0 0 0 50px #D80286;
 }
 
 /* .character-container {
@@ -51,8 +82,6 @@
 .character-card {
   width: 300px;
   height: 240px;
-  /* border: solid 1px #363f45; */
-  /* repo gave me these border specs ^ that did not look right, except on hover */
   border: 1px solid rgba(223, 229, 234);
   margin-right: 16px;
   margin-bottom: 16px;
@@ -89,12 +118,6 @@
   font-size: 14px;
 }
 
-/* .image {
-  padding-right: 10px;
-  height: 10px;
-  width: 10px;
-} */
-
 .name {
   margin: 1.5;
   font-size: 16px;
@@ -104,8 +127,10 @@
 }
 
 .character-info {
+  padding-left: 10%;
   width: 100%;
   margin: 1.5;
+  background: rgba(255, 255, 255, 0.575);
 }
 
 .species {
@@ -132,6 +157,6 @@
 .status {
   font-size: 14px;
   font-weight: normal;
-  color: #5a6872;
+  color: #ff2d2d;
   margin: 1.5;
 }
