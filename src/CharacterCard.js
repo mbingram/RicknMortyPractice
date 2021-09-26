@@ -12,7 +12,8 @@ export default function CharacterCard({ character }) {
         className="character-card"
         >
             <div className="card-content"
-                style={{backgroundImage: `url(${image})`}}>
+                style={{backgroundImage: `url(${image})`,
+                        borderRadius: '8px'}}>
             {/* <div className="image">
                 <img alt="alt" src={image} />
             </div> */}
