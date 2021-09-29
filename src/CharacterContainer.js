@@ -48,6 +48,13 @@ export default function CharacterContainer({ characters }) {
                     onClick={handleClick}
                 />
                     <label htmlFor="myInput" className="filter-label">Dead</label>
+                <input
+                    id="myInput"
+                    value="unknown"
+                    type="checkbox"
+                    onClick={handleClick}
+                />
+                    <label htmlFor="myInput" className="filter-label">Unknown</label>
             </form>
             <div className="character-container">
                 {displayCharacters()}

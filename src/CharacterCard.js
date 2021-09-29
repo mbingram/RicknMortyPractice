@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 
 export default function CharacterCard({ character }) {
-    const { name, status, species, image, location, origin } = character
+    const { name, status, species, image, location, origin, url } = character
     const [isShown, setIsShown] = useState(false);
-    const toggleClass = isShown === true ? 'hover-info' : 'airline-info';
+    const toggleClass = isShown === true ? 'hover-info' : 'character-info';
 
     return (
     <div
